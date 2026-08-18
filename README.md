@@ -1,11 +1,9 @@
 # LRU cache
 
-A small fixed-capacity LRU cache — no dependencies.
-
-TypeScript Lru uses only the typescript standard library; there is no service or dependency to install.
+I needed a fixed-capacity LRU cache for a new pricing tier. Pulling in a heavy npm package just to evict old keys doesn't move the needle on revenue. This implementation relies entirely on the standard TypeScript library. Zero external dependencies. You avoid supply chain risks and keep your bundle tiny.
 
 ```
 lru.ts
 ```
 
-Run the TypeScript Lru test next to the implementation for concrete examples. The test file covers eviction order, capacity limits, and key updates. If you're integrating this into a larger app, the cache is a plain class, so you can import it and use it directly. Keep the cache size small relative to your working set; that's where it helps the most.
+Look at the test file next to the source. It gives you concrete examples of how to wire it up. Keep things simple and ship the feature.
